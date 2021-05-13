@@ -14,6 +14,8 @@ try:
             if res: return res
             return '/System/Library/Frameworks/'+name+'.framework/'+name
         util.find_library = new_util_find_library
+    finally:
+        import OpenGL.GL as gl
 except ImportError:
     pass
 
